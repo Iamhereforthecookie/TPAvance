@@ -1,5 +1,6 @@
 package UPsay.ET5;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -28,7 +29,7 @@ public class Activity2 extends AppCompatActivity {
     public void onClickRetour(View view)
     {
         Intent messageIntent = new Intent();
-        setResult(Activity.RESULT_OK, messageIntent);
+        setResult(MainActivity.RESULT_OK, messageIntent);
         finish();
     }
 }

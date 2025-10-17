@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> lanceActivity2;
 
-    lanceActivity2 = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),result -> {});
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        lanceActivity2 = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),result -> {});
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
